@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Journal — Sign Up</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="A mental health journal">
+  <meta name="author" content="Ayush Kumar & Sarah Sating">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: white;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 16px;
+      border-radius: 16px;
+      border-width: 1px;
+      border-color: gainsboro;
+      border-style: solid;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .form-container h2 {
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .form-container label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .form-container input {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .form-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: blue;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .form-container button:hover {
+      background-color: darkblue;
+    }
+
+    .form-container p {
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Sign Up</h2>
+    <form action="/user/sign-up" method="post">
+      <label for="firstName">First Name</label>
+      <input type="text" id="firstName" name="firstName" required>
+
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" name="lastName" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <p>Already signed up? <a href="sign-in">Sign in!</a></p>
+  </div>
+</body>
+</html>

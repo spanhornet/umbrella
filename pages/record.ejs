@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Journal — Record</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="A mental health journal">
+  <meta name="author" content="Ayush Kumar & Sarah Sating">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: white;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 16px;
+      border-radius: 16px;
+      border-width: 1px;
+      border-color: gainsboro;
+      border-style: solid;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .form-container h2 {
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .form-container label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    .form-container select,
+    .form-container textarea {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .form-container select {
+        width: calc(100%);
+    }
+
+    .form-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: blue;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .form-container button:hover {
+      background-color: darkblue;
+    }
+
+    .form-container textarea {
+      height: 100px;
+      resize: vertical;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Record</h2>
+    <form action="/record" method="post">
+      <label for="emotion">Emotion</label>
+        <select id="emotion" name="emotion" required>
+        <option value="">-- Select an emotion --</option>
+        <option value="alone">Alone</option>
+        <option value="amazing">Amazing</option>
+        <option value="anger">Anger</option>
+        <option value="beauty">Beauty</option>
+        <option value="courage">Courage</option>
+        <option value="faith">Faith</option>
+        <option value="fear">Fear</option>
+        <option value="forgiveness">Forgiveness</option>
+        <option value="freedom">Freedom</option>
+        <option value="friendship">Friendship</option>
+        <option value="happiness">Happiness</option>
+        <option value="hope">Hope</option>
+        <option value="humor">Humor</option>
+        <option value="jealousy">Jealousy</option>
+        <option value="love">Love</option>
+        </select>
+
+
+      <label for="content">Content</label>
+      <textarea id="content" name="content" placeholder="Today, I am feeling..." required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
